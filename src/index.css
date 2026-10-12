@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", "Tajawal", system-ui, sans-serif;
+  --color-nashama-red: #E50914;
+  --color-nashama-red-hover: #c90812;
+  --color-nashama-dark: #09090b;
+  --color-nashama-darker: #08080a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", "Tajawal", system-ui, sans-serif;
+  background-color: #08080a;
+  color: #fff;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111116;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #33333d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(229, 9, 20, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(229, 9, 20, 0.6); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes radar-pulse {
+  0% { opacity: 0.9; transform: scale(0.9); }
+  50% { opacity: 0.3; transform: scale(1.4); }
+  100% { opacity: 0; transform: scale(1.8); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.glow-red {
+  box-shadow: 0 0 30px -5px rgba(229, 9, 20, 0.45);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 50px -5px rgba(229, 9, 20, 0.6);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+.phone-device {
+  background: #09090b;
+  border-radius: 44px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9),
+    0 0 0 3px #27272a,
+    0 0 0 6px #121215;
+}
